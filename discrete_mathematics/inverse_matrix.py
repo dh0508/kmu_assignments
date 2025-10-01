@@ -120,11 +120,13 @@ def compare(matrix1, matrix2):
             return
         is_equal = True
         for i in range(n):
-            if is_equal:
-                for j in range(n):
-                    if is_equal:
-                        if matrix1[i][j] != matrix2[i][j]:
-                            is_equal = False
+            for j in range(n):
+                if matrix1[i][j] != matrix2[i][j]:
+                    is_equal = False
+                    break
+            if not is_equal:
+                break
+
         if is_equal:
             print("두 행렬은 동일합니다.")
         else:
