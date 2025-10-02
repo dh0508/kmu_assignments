@@ -116,7 +116,7 @@ def print_matrix(matrix):
 def compare(matrix1, matrix2):
     if matrix1 and matrix2:
         if len(matrix1) != len(matrix2):
-            print(False)
+            print("두 행렬은 다릅니다.")
             return
         is_equal = True
         for i in range(n):
@@ -143,16 +143,11 @@ def verify_inverse(matrix, inverse):
     # 행렬 곱하기
     product = [[sum(matrix[i][k] * inverse[k][j] for k in range(n)) for j in range(n)] for i in range(n)]
 
-    # 단위행렬 생성
-    identity = [[1 if i == j else 0 for j in range(n)] for i in range(n)]
-
     print("\n=== 원래 행렬 × 역행렬 ===")
     print_matrix(product)
 
-    print("\n=== 단위행렬 ===")
-    print_matrix(identity)
 
-    # 단위행렬과 비교 (부동소수 오차 고려)
+    # 단위행렬인지 확인 (부동소수 오차 고려)
     is_identity = True
     for i in range(n):
         for j in range(n):
@@ -171,17 +166,19 @@ def verify_inverse(matrix, inverse):
 
 
 n, matrix = input_matrix()
-
-det_inv_mat = get_inverse_matrices_by_determinant(n, matrix)
-
-gauss_inv_mat = get_inverse_matrices_by_Gauss_Jordan_dlimination(n, matrix)
-
+print("입력받은 행렬")
+print_matrix(matrix)
 
 print("행렬식으로 구한 역행렬")
+det_inv_mat = get_inverse_matrices_by_determinant(n, matrix)
 print_matrix(det_inv_mat)
 
 print("가우스 조던 소거법으로 구한 역행렬")
+gauss_inv_mat = get_inverse_matrices_by_Gauss_Jordan_dlimination(n, matrix)
 print_matrix(gauss_inv_mat)
 
+print("비교 결과")
 compare(det_inv_mat, gauss_inv_mat)
+
+print("검산 결과")
 verify_inverse(matrix, det_inv_mat)
