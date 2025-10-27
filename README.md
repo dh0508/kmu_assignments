@@ -6,5 +6,6 @@
 |1 - 2|[선형대수](https://github.com/dh0508/kmu_assignments/tree/main/linear_algebra)|김기택 교수님|
 |1 - 2|[유레카프로젝트](https://github.com/dh0508/kmu_assignments/tree/main/EurekaProject)|김장호 교수님|
 |1 - 2|[응용통계학](https://github.com/dh0508/kmu_assignments/tree/main/Applied_Statistics)|이상환 교수님|
+|2 - 1|[Python프로그래밍](https://github.com/dh0508/kmu_assignments/tree/main/Python_Programming)|서두옥 교수님|
 |2 - 2|[정보검색과텍스트마이닝](https://github.com/dh0508/kmu_assignments/tree/main/information_search_and_text_mining)|강승식 교수님|
 |2 - 2|[이산수학](https://github.com/dh0508/kmu_assignments/tree/main/discrete_mathematics)|김형균 교수님|
