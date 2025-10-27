@@ -1,0 +1,5 @@
+data = read.table("data.txt")
+print(nrow(data))
+print(ncol(data))
+print(nrow(data[data[, 2] >= 1.05 * data[, 3], ]))
+print(data[data[, 1] == "2024.09.11", 2])
