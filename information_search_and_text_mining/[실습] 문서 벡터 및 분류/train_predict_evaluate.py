@@ -21,7 +21,7 @@ MORPH_TEST   = Path(DIR) / "test_Tfidf_morph.txt"
 TRAIN_LBL = Path(DIR) / "train.txt"
 TEST_LBL  = Path(DIR) / "test.txt"
 
-# 좌표형 TXT → CSR 로더
+# 좌표형 TXT --> CSR 로더
 def load_sparse_txt(path):
     with open(path, "r", encoding="utf-8") as f:
         shape_line = f.readline().strip().split("\t")
@@ -109,4 +109,5 @@ print(f"학습 시간: {t1-t0:.3f}초")
 y_pred = clf.predict(X_test)
 acc = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {acc:.5f}")
+
 print(classification_report(y_test, y_pred, digits=4))
